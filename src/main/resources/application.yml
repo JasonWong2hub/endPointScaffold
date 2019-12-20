@@ -7,6 +7,21 @@ spring:
     url:  jdbc:mysql://localhost:3306/scaffold?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: 123456
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+        max-wait: -1
+        # 连接池最大连接数（使用负值表示没有限制） 默认 8
+        max-active: 8
+        # 连接池中的最大空闲连接 默认 8
+        max-idle: 8
+        # 连接池中的最小空闲连接 默认 0
+        min-idle: 0
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.jason.@artifactId@.entity
@@ -15,6 +30,6 @@ logging:
     com:
       jason:
         scaffold:
-          mapper : debug
+          mapper: debug
 server:
   port: 3737
