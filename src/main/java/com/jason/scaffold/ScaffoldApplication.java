@@ -5,8 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@MapperScan("com.jason.scaffold.mapper")
 @SpringBootApplication
+@MapperScan("com.jason.scaffold.mapper")
 public class ScaffoldApplication {
 
     public static void main(String[] args) {

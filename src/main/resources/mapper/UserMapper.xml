@@ -2,19 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jason.scaffold.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="com.jason.scaffold.entity.User">
-        <result column="id" jdbcType="INTEGER" property="id" />
-        <result column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="age" property="age" />
-    </resultMap>
 
-    <insert id="save">
-        insert into user (id, name, age) values (uuid(), #{user.name}, #{user.age})
-    </insert>
-
-    <select id="selectTop1" resultType="com.jason.scaffold.entity.User">
-        select * from user limit 1
-    </select>
 
 </mapper>

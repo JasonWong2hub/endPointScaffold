@@ -22,9 +22,13 @@ spring:
         max-idle: 8
         # 连接池中的最小空闲连接 默认 0
         min-idle: 0
-mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
   type-aliases-package: com.jason.@artifactId@.entity
+  type-enums-package: com.jason.@artifactId@.enums
+  configuration:
+    cache-enabled: false
 logging:
   level:
     com:

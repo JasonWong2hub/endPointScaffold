@@ -1,41 +1,72 @@
 package com.jason.scaffold.entity;
 
-public class User {
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.jason.scaffold.entity.base.BaseEntity;
+import com.jason.scaffold.enums.AchievementEnum;
+import com.jason.scaffold.enums.GenderEnum;
+import com.jason.scaffold.enums.TrueFalseEnum;
+import lombok.Data;
 
-    private String id;
-    private String name;
-    private int age;
+/**
+ * 用户信息
+ */
+@Data
+@TableName("ith_admin_user")
+public class User extends BaseEntity {
 
-    public String getId() {
-        return id;
-    }
+    /**
+     * 用户名
+     */
+    private String userName;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    /**
+     * 昵称
+     */
+    private String nickName;
 
-    public String getName() {
-        return name;
-    }
+    /**
+     * 性别
+     */
+    private GenderEnum gender;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * 手机号码
+     */
+    private String phone;
 
-    public int getAge() {
-        return age;
-    }
+    /**
+     * 电子邮箱
+     */
+    private String email;
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    /**
+     * 战绩
+     */
+    private AchievementEnum achievement;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 盐
+     */
+    private String salt;
+
+    /**
+     * 微信openId
+     */
+    private String openid;
+
+    /**
+     * 头像url
+     */
+    private String avatar;
+
+    /**
+     * 状态
+     */
+    private TrueFalseEnum status;
+
 }
